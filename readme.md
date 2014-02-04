@@ -14,7 +14,7 @@ Just remember, to activate a change in the dotfile, you must **reload your shell
 
 # GCC
 
-Most OS level programs are written in C or C++. These programs must be compiled and interpreted by a C-level compiler. The most common compiler for POSIX systems is GCC, or the GNU Compiler Collection. On OS 10.8 and below (anything before mavericks), we install GCC via XCode. Download XCode from the Mac App store. Once Xcode is installed, open it, then in the menu bar click on Xcode > preferences, then select Downloads. Download the command line tools. 
+Most OS level programs are written in C or C++. These programs must be compiled and interpreted by a C-level compiler. The most common compiler for POSIX systems is GCC, or the GNU Compiler Collection. On OS 10.8 and below (anything before Mavericks), we install GCC via XCode. Download XCode from the Mac App store. Once Xcode is installed, open it, then in the menu bar click on Xcode > preferences, then select Downloads. Download the command line tools. 
 
 If you are using using OS 10.9(Mavericks) or above, you need to download the command line tools from Apples [developer webiste](https://developer.apple.com/downloads), or if you don't have an Apple developer account, you can download the command line tools [here](http://flatiron-school.s3.amazonaws.com/software/command_line_tools_os_x_mavericks_for_xcode__late_october_2013.dmg).
 
@@ -30,7 +30,7 @@ If you see output like:
 -bash: gcc: command not found
 ```
 
-XCode is not setup correctly.
+The command line tools are not set up correctly.
 
 [Creator of XCode Command Line Tools on Installing GCC](https://medium.com/kr-projects/6e54e8c50dc8)
 
@@ -82,14 +82,14 @@ The exact same instructions apply to sqlite3. For sqlite3 though you must also d
 Next comes setting up our ruby version manager. OS X ships with an old version of ruby and we want to seamlessly be able to move between versions. First, watch this short [screencast on RVM - 8 minutes](http://screencasts.org/episodes/how-to-use-rvm), read about it on [RVM](http://rvm.io) and then install rvm with:
 
 ```
-\curl -L https://get.rvm.io | bash -s stable --ruby=1.9.3
+\curl -L https://get.rvm.io | bash -s stable --ruby=2.0.0
 ```
 
-That will install the latest stable version of RVM along with the latest stable version of ruby 1.9.3. *We won't be using Ruby 2.0 yet.* Then type `rvm use 1.9.3 --default` to make that your default ruby. Open a new tab and try ruby -v and see if it matches the installed version of ruby. You can install new version of ruby with `rvm install 2.0.0` and see all installable rubies with `rvm list known`
+That will install the latest stable version of RVM along with the latest stable version of ruby 2.0.0. Then type `rvm use 2.0.0 --default` to make that your default ruby. Open a new tab and try ruby -v and see if it matches the installed version of ruby. You can install new version of ruby with `rvm install 2.1.0` and see all installable rubies with `rvm list known`
 
 ## Troubleshooting RVM
 
-There are two main sources of problems with RVM. Most occur during the installing of Ruby portion. You might get errors regarding XCode or GCC and that generally means you need to [uninstall XCode - read the entire guide, follow all instructions](http://osxdaily.com/2012/02/20/uninstall-xcode/) and then restart your computer. Reinstall an up to date version of xcode and then try to install ruby again.
+There are two main sources of problems with RVM. Most occur during the installing of Ruby portion. You might get errors regarding XCode or GCC and that generally means you need to [uninstall XCode - read the entire guide, follow all instructions](http://osxdaily.com/2012/02/20/uninstall-xcode/) and then restart your computer. Reinstall an up to date version of Xcode or the command line tools if you are on Mavericks and then try to install ruby again.
 
 Other issues have to do with broken homebrew installations. Try reinstalling homebrew with:
 
@@ -139,11 +139,11 @@ If you see some `bash - command not found` type output, it's not a big deal, but
 
 ## ruby
 
-`ruby -v` should give you a modern, rvm based ruby, like 1.9.3. `which ruby` should point to an rvm path. Opening a new terminal should maintain ruby versions, if not try `rvm use 1.9.3 --default`
+`ruby -v` should give you a modern, rvm based ruby, like 2.0.0. `which ruby` should point to an rvm path. Opening a new terminal should maintain ruby versions, if not try `rvm use 2.0.0 --default`
 
 ## rvm
 
-`rvm list` should show you installed ruby versions, like 1.9.3.
+`rvm list` should show you installed ruby versions, like 2.0.0.
 
 ## sqlite3
 
@@ -151,7 +151,7 @@ If you see some `bash - command not found` type output, it's not a big deal, but
 
 ## git
 
-`git --version` should be above 1.8.1. `which git` should point to `/usr/local/bin/git`. If not `brew install git` and `brew link git --force`, new terminal, retest.
+`git --version` should be above 1.8.5. `which git` should point to `/usr/local/bin/git`. If not `brew install git` and `brew link git --force`, new terminal, retest.
 
 ## rubygems
 
@@ -159,27 +159,25 @@ If you see some `bash - command not found` type output, it's not a big deal, but
 
 ```
 RubyGems Environment:
-  - RUBYGEMS VERSION: 1.8.23
-  - RUBY VERSION: 1.9.3 (2012-11-10 patchlevel 327) [x86_64-darwin12.2.1]
-  - INSTALLATION DIRECTORY: /Users/avi/.rvm/gems/ruby-1.9.3-p327
-  - RUBY EXECUTABLE: /Users/avi/.rvm/rubies/ruby-1.9.3-p327/bin/ruby
-  - EXECUTABLE DIRECTORY: /Users/avi/.rvm/gems/ruby-1.9.3-p327/bin
+  - RUBYGEMS VERSION: 2.2.1
+  - RUBY VERSION: 2.0.0 (2013-06-27 patchlevel 247) [x86_64-darwin13.0.0]
+  - INSTALLATION DIRECTORY: /Users/arelenglish/.rvm/gems/ruby-2.0.0-p247
+  - RUBY EXECUTABLE: /Users/arelenglish/.rvm/rubies/ruby-2.0.0-p247/bin/ruby
+  - EXECUTABLE DIRECTORY: /Users/arelenglish/.rvm/gems/ruby-2.0.0-p247/bin
+  - SPEC CACHE DIRECTORY: /Users/arelenglish/.gem/specs
   - RUBYGEMS PLATFORMS:
     - ruby
-    - x86_64-darwin-12
+    - x86_64-darwin-13
   - GEM PATHS:
-     - /Users/avi/.rvm/gems/ruby-1.9.3-p327
-     - /Users/avi/.rvm/gems/ruby-1.9.3-p327@global
+     - /Users/arelenglish/.rvm/gems/ruby-2.0.0-p247
+     - /Users/arelenglish/.rvm/gems/ruby-2.0.0-p247@global
   - GEM CONFIGURATION:
      - :update_sources => true
      - :verbose => true
-     - :benchmark => false
      - :backtrace => false
      - :bulk_threshold => 1000
-     - "gem" => "--no-ri"
-     - :sources => ["http://gems.rubyforge.org"]
   - REMOTE SOURCES:
-     - http://gems.rubyforge.org
+     - https://rubygems.org/
 ```
 
 Notice how all the ruby versions correspond in both number and paths?
