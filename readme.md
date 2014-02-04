@@ -45,7 +45,7 @@ Mount the downloaded DMG and install. Open a new terminal and try `gcc`.
 
 # Homebrew
 
-Once GCC is installed the next step is to install [Homebrew](http://mxcl.github.io/homebrew/). Homebrew will be our package manager, the system we use to install OS / Command Line level applications.
+Once GCC is installed the next step is to install [Homebrew](http://brew.sh/. Homebrew will be our package manager, the system we use to install OS / Command Line level applications.
 
 After, make sure to run brew doctor and try to resolve as many of the conflicts as possible.
 
