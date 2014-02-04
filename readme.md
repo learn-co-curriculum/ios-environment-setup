@@ -1,3 +1,8 @@
+---
+tags: setup, environment, bash
+languages: ruby
+---
+
 # Bash Profile
 
 As you've been learning, your bash_profile is a script that runs every time you open or login to your shell. It can configure environment variables, like your `PS1`, which stores your prompt, or `EDITOR`, which is the command other programs will use when they need to launch your default editor.
