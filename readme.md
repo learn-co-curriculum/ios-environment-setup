@@ -21,7 +21,7 @@ If you are using using OS 10.9(Mavericks) or above, you need to download the com
 Once GCC is installed correctly, you should be able to type `gcc` into terminal and see output like:
 
 ```
-i686-apple-darwin11-llvm-gcc-4.2: no input files
+clang: error: no input files
 ```
 
 If you see output like:
@@ -116,7 +116,7 @@ Finally ensure that 1.9.3 is the default ruby with `rvm use 1.9.3 --default`
 Typing `gcc` should give you something like:
 
 ```
-i686-apple-darwin11-llvm-gcc-4.2: no input files
+clang: error: no input files
 ```
 
 Not command not found.
