@@ -211,7 +211,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 ```
 
-## gitconfig
+## .gitconfig
 
 Grab the [Flatiron GitConfig](https://github.com/flatiron-school/dotfiles/blob/master/gitconfig) and create it as `.gitconfig` in your `~`. Also, don't forget to replace the values in some of the person variables like `excludesfile = /Users/<YOUR HOME DIRECTORY>/.gitignore` and:
 
@@ -224,16 +224,16 @@ Pay attention to the cool aliases setup in the git config, like git co for git c
   email = <github email address>
 ```
 
-## gitignore
+## .gitignore
 
 Read [Github GitIgnore Guide](https://help.github.com/articles/ignoring-files), so you understand what a global gitignore will do and then grab the [Flatiron GitIgnore](https://github.com/flatiron-school/dotfiles/blob/master/gitignore) and create it in `~` as `.gitignore`.
 
-## gemrc
+## .gemrc
 
 `gem: --no-ri --no-rdoc`
 This will omit installing the rdoc documentation and speed up gem installs.
 
-## irbrc
+## .irbrc
 
 ```ruby
 class Object
