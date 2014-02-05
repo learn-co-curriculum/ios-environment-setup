@@ -87,10 +87,10 @@ The exact same instructions apply to sqlite3. For sqlite3 though you must also d
 Next comes setting up our ruby version manager. OS X ships with an old version of ruby and we want to seamlessly be able to move between versions. First, watch this short [screencast on RVM - 8 minutes](http://screencasts.org/episodes/how-to-use-rvm), read about it on [RVM](http://rvm.io) and then install rvm with:
 
 ```
-\curl -L https://get.rvm.io | bash -s stable --ruby=2.0.0
+\curl -L https://get.rvm.io | bash -s stable --ruby=2.1.0
 ```
 
-That will install the latest stable version of RVM along with the latest stable version of ruby 2.0.0. Then type `rvm use 2.0.0 --default` to make that your default ruby. Open a new tab and try ruby -v and see if it matches the installed version of ruby. You can install new version of ruby with `rvm install 2.1.0` and see all installable rubies with `rvm list known`
+That will install the latest stable version of RVM along with the latest stable version of ruby 2.1.0. Then type `rvm use 2.1.0 --default` to make that your default ruby. Open a new tab and try ruby -v and see if it matches the installed version of ruby. You can install new version of ruby with `rvm install 2.1.0` and see all installable rubies with `rvm list known`
 
 ## Troubleshooting RVM
 
@@ -144,11 +144,11 @@ If you see some `bash - command not found` type output, it's not a big deal, but
 
 ## ruby
 
-`ruby -v` should give you a modern, rvm based ruby, like 2.0.0. `which ruby` should point to an rvm path. Opening a new terminal should maintain ruby versions, if not try `rvm use 2.0.0 --default`
+`ruby -v` should give you a modern, rvm based ruby, like 2.1.0. `which ruby` should point to an rvm path. Opening a new terminal should maintain ruby versions, if not try `rvm use 2.1.0 --default`
 
 ## rvm
 
-`rvm list` should show you installed ruby versions, like 2.0.0.
+`rvm list` should show you installed ruby versions, like 2.1.0.
 
 ## sqlite3
 
@@ -165,17 +165,17 @@ If you see some `bash - command not found` type output, it's not a big deal, but
 ```
 RubyGems Environment:
   - RUBYGEMS VERSION: 2.2.1
-  - RUBY VERSION: 2.0.0 (2013-06-27 patchlevel 247) [x86_64-darwin13.0.0]
-  - INSTALLATION DIRECTORY: /Users/arelenglish/.rvm/gems/ruby-2.0.0-p247
-  - RUBY EXECUTABLE: /Users/arelenglish/.rvm/rubies/ruby-2.0.0-p247/bin/ruby
-  - EXECUTABLE DIRECTORY: /Users/arelenglish/.rvm/gems/ruby-2.0.0-p247/bin
+  - RUBY VERSION: 2.1.0 (2013-06-27 patchlevel 247) [x86_64-darwin13.0.0]
+  - INSTALLATION DIRECTORY: /Users/arelenglish/.rvm/gems/ruby-2.1.0-p0
+  - RUBY EXECUTABLE: /Users/arelenglish/.rvm/rubies/ruby-2.1.0-p0/bin/ruby
+  - EXECUTABLE DIRECTORY: /Users/arelenglish/.rvm/gems/ruby-2.1.0-p0/bin
   - SPEC CACHE DIRECTORY: /Users/arelenglish/.gem/specs
   - RUBYGEMS PLATFORMS:
     - ruby
     - x86_64-darwin-13
   - GEM PATHS:
-     - /Users/arelenglish/.rvm/gems/ruby-2.0.0-p247
-     - /Users/arelenglish/.rvm/gems/ruby-2.0.0-p247@global
+     - /Users/arelenglish/.rvm/gems/ruby-2.1.0-p0
+     - /Users/arelenglish/.rvm/gems/ruby-2.1.0-p0@global
   - GEM CONFIGURATION:
      - :update_sources => true
      - :verbose => true
