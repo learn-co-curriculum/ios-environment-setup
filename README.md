@@ -9,7 +9,7 @@ As you've been learning, your bash_profile is a script that runs every time you 
 
 You can also create aliases for common commands so that they are shorter to use.
 
-And finally, you can also build functions so simplify common workflows.
+And finally, you can also build functions to simplify common workflows.
 
 [Flatiron Bash Profile](https://github.com/flatiron-school/dotfiles/blob/master/bash_profile)
 
@@ -37,17 +37,15 @@ If you see output like:
 
 The command line tools are not set up correctly.
 
-[Creator of XCode Command Line Tools on Installing GCC](https://medium.com/kr-projects/6e54e8c50dc8)
-
 [Download XCode Command Line Tools from Apple](https://developer.apple.com/downloads/index.action) *search for Command Line Tools*
 
 Mount the downloaded DMG and install. Open a new terminal and try `gcc`.
 
 # Homebrew
 
-Once GCC is installed the next step is to install [Homebrew](http://brew.sh/. Homebrew will be our package manager, the system we use to install OS / Command Line level applications.
+Once GCC is installed the next step is to install [Homebrew](http://brew.sh/). Homebrew will be our package manager, the system we use to install OS / Command Line level applications.
 
-After, make sure to run brew doctor and try to resolve as many of the conflicts as possible.
+After, make sure to run `brew doctor` and try to resolve as many of the conflicts as possible.
 
 Try `brew search postgres` and you'll find the postgres package (don't install it, we'll do that later.)
 
@@ -87,10 +85,10 @@ The exact same instructions apply to sqlite3. For sqlite3 though you must also d
 Next comes setting up our ruby version manager. OS X ships with an old version of ruby and we want to seamlessly be able to move between versions. First, watch this short [screencast on RVM - 8 minutes](http://screencasts.org/episodes/how-to-use-rvm), read about it on [RVM](http://rvm.io) and then install rvm with:
 
 ```
-\curl -L https://get.rvm.io | bash -s stable --ruby=2.1.0
+\curl -L https://get.rvm.io | bash -s stable --ruby=2.1.1
 ```
 
-That will install the latest stable version of RVM along with the latest stable version of ruby 2.1.0. Then type `rvm use 2.1.0 --default` to make that your default ruby. Open a new tab and try ruby -v and see if it matches the installed version of ruby. You can install new version of ruby with `rvm install 2.1.0` and see all installable rubies with `rvm list known`
+That will install the latest stable version of RVM along with the latest stable version of ruby 2.1.1. Then type `rvm use 2.1.1 --default` to make that your default ruby. Open a new tab and try ruby -v and see if it matches the installed version of ruby. You can install another version of ruby with `rvm install 2.1.0` and see all installable rubies with `rvm list known`
 
 ## Troubleshooting RVM
 
@@ -112,7 +110,7 @@ sudo mv /usr/bin/gem /usr/bin/gem.bak
 ### Uninstalling RVM Because of Sys Wide Installs
 
 Another issue is sometimes rvm gets installed in /usr/local/rvm, a system wide install. If so, you have to rvm implode to uninstall rvm, clear out your .bashrc file or remove any reference to RVM in there, `sudo rm /etc/profile.d/rvm.sh`.  You'll also want to remove the reference to that file you just deleted in the `/etc/profile`. Also `sudo rm /etc/rvmrc`. And then restart your computer and reinstall rvm. Make sure it is installing into `/Users/yourusername/.rvm` and not `/usr/local` A system wide install in /usr/local/rvm, never install rvm with sudo (and avoiding the use of sudo in general).
-Finally ensure that 1.9.3 is the default ruby with `rvm use 1.9.3 --default`
+Finally ensure that 2.1.1 is the default ruby with `rvm use 2.1.1 --default`
 
 # Check Up
 
