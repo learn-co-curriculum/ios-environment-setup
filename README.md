@@ -1,7 +1,11 @@
 ---
 tags: setup, environment, bash
-languages: ruby
+languages: ruby, bash
 ---
+
+#Environment Setup
+
+It's important to get your system setup and working well. There are a ton of different ways to customize your system, but to keep things simple, and to make it easy for others to work with you, we're going to set our computers up in a similar way. Go through the instructions in readme and the files in this repo and follow the instructions.
 
 # Bash Profile
 
@@ -111,6 +115,10 @@ sudo mv /usr/bin/gem /usr/bin/gem.bak
 
 Another issue is sometimes rvm gets installed in /usr/local/rvm, a system wide install. If so, you have to rvm implode to uninstall rvm, clear out your .bashrc file or remove any reference to RVM in there, `sudo rm /etc/profile.d/rvm.sh`.  You'll also want to remove the reference to that file you just deleted in the `/etc/profile`. Also `sudo rm /etc/rvmrc`. And then restart your computer and reinstall rvm. Make sure it is installing into `/Users/yourusername/.rvm` and not `/usr/local` A system wide install in /usr/local/rvm, never install rvm with sudo (and avoiding the use of sudo in general).
 Finally ensure that 2.1.2 is the default ruby with `rvm use 2.1.2 --default`
+
+# SublimeText3
+
+We spend most of our time in a text editor. Make sure you have a good one. We use [SublimeText3](http://www.sublimetext.com/3). Once you have that installed, go to the `sublime.md` file in this repository and follow the instructions to get sublime setup properly.
 
 # Check Up
 
