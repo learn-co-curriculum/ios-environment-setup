@@ -19,13 +19,15 @@ And finally, you can also build functions to simplify common workflows.
 
 Within that Bash Profile are comments that explain each part. Make sure to read them! You can always comment sections in/out to see what they do and how they effect your prompt, shell, and environment. To create this bash_profile locally, simply navigate into your home directory (`cd ~`) and `touch .bash_profile` or if it exists already (`ls -a` and scan the output to see if there is a file .bash_profile - `open .bash_profile`). Copy the raw text from the Flatiron Bash Profile into your bash_profile and save.
 
-Just remember, to activate a change in the dotfile, you must **reload your shell**. You can do that via opening a new tab or by typing `source ~/.bash_profile`. The `source` command basically will load a bash script (which your profile is coded in) into the current shell.
+Just remember, to activate a change in the dotfile, you must **reload your shell**. You can do that via opening a new tab.
 
 # GCC
 
-Most OS level programs are written in C or C++. These programs must be compiled and interpreted by a C-level compiler. The most common compiler for POSIX systems is GCC, or the GNU Compiler Collection. On OS 10.8 and below (anything before Mavericks), we install GCC via XCode. Download XCode from the Mac App store. Once Xcode is installed, open it, then in the menu bar click on Xcode > preferences, then select Downloads. Download the command line tools. 
+Most OS level programs are written in C or C++. These programs must be compiled and interpreted by a C-level compiler. The most common compiler for POSIX systems is GCC, or the GNU Compiler Collection. On OS 10.8 and below (anything before Mavericks), GCC is part of the command line tools.  
 
 If you are using using OS 10.9(Mavericks) or above, you need to download the command line tools from Apples [developer webiste](https://developer.apple.com/downloads), or if you don't have an Apple developer account, you can download the command line tools [here](http://flatiron-school.s3.amazonaws.com/software/command_line_tools_os_x_mavericks_for_xcode__late_october_2013.dmg).
+
+If you have OS 10.8 or earlier, you should upgrade. You will also need to download Xcode from the mac App Store and download the command line tools from there. 
 
 Once GCC is installed correctly, you should be able to type `gcc` into terminal and see output like:
 
