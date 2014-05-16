@@ -4,27 +4,12 @@
 The first task is to make a symlink to subl. This will allow you to type `subl` in your terminal to launch Sublime Text. Assuming you've placed Sublime Text 2 in the Applications folder, and that you have a `/usr/local/bin` directory in your path, you can run:
 
 ```
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin
 ```
-
-## RVM and Sublime Play Nice
-
-Get Sublime to use your rvm ruby... Change your `~/Library/Application Support/Sublime Text 2/Packages/Ruby/Ruby.sublime-build` to this:
-
-```
-{
-  "env":{
-      "PATH":"${HOME}/.rvm/bin:${PATH}"
-  },
-  "cmd": ["rvm-auto-ruby", "$file"],
-  "file_regex": "^(...*?):([0-9]*):?([0-9]*)",
-  "selector": "source.ruby"
-}
-```
-
-Try `open "$HOME/Library/Application Support/Sublime Text 2/Packages/Ruby/Ruby.sublime-build" to open that file and then paste the content above.
 
 ## Install Package Control
+
+go to [this link](https://sublime.wbond.net/installation)
 
 Sublime Text's functionality can be greatly expanded via plugins called "packages." We won't get into any specific ones to install here, but in order to install them later on down the road, we need to install what is known as Package Control.
 
