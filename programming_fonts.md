@@ -11,3 +11,4 @@ may want to consider installing:
 - [More Fonts!](http://www.openwatcom.org/index.php/Programmers_Fonts)
 - [Even More Fonts!](http://www.proggyfonts.com/)
 - [Managing Fonts in OS X](http://support.apple.com/kb/ht2435)
+- [Changing Fonts in XCode](https://developer.apple.com/library/ios/recipes/xcode_help-fonts_and_colors_preferences_help/Recipe.html)

@@ -1,6 +1,6 @@
 ---
 tags: setup, environment, bash
-languages: ruby, bash
+languages: objc, bash
 ---
 
 #Environment Setup
@@ -21,122 +21,19 @@ Within that Bash Profile are comments that explain each part. Make sure to read 
 
 Just remember, to activate a change in the dotfile, you must **reload your shell**. You can do that via opening a new tab.
 
-# GCC
+# CocoaPods
 
-Most OS level programs are written in C or C++. These programs must be compiled and interpreted by a C-level compiler. The most common compiler for POSIX systems is GCC, or the GNU Compiler Collection. On OS 10.8 and below (anything before Mavericks), GCC is part of the command line tools.  
-
-If you are using using OS 10.9(Mavericks) or above, you need to download the command line tools from Apples [developer webiste](https://developer.apple.com/downloads), or if you don't have an Apple developer account, you can download the command line tools [here](http://flatiron-school.s3.amazonaws.com/software/command_line_tools_os_x_mavericks_for_xcode__late_october_2013.dmg).
-
-If you have OS 10.8 or earlier, you should upgrade. You will also need to download Xcode from the mac App Store and download the command line tools from there. 
-
-Once GCC is installed correctly, you should be able to type `gcc` into terminal and see output like:
+Cocoapods is a library management system. If you are on Mavericks you should be able to install by just doing:
 
 ```
-clang: error: no input files
+sudo gem install cocoapod
 ```
-
-If you see output like:
-
-```
--bash: gcc: command not found
-```
-
-The command line tools are not set up correctly.
-
-[Download XCode Command Line Tools from Apple](https://developer.apple.com/downloads/index.action) *search for Command Line Tools*
-
-Mount the downloaded DMG and install. Open a new terminal and try `gcc`.
-
-# Homebrew
-
-Once GCC is installed the next step is to install [Homebrew](http://brew.sh/). Homebrew will be our package manager, the system we use to install OS / Command Line level applications.
-
-After, make sure to run `brew doctor` and try to resolve as many of the conflicts as possible.
-
-Try `brew search postgres` and you'll find the postgres package (don't install it, we'll do that later.)
-
-## Reinstalling Homebrew
-
-Should you need this works:
-
-```
-\curl -L https://gist.github.com/mxcl/1173223/raw/a833ba44e7be8428d877e58640720ff43c59dbad/uninstall_homebrew.sh | bash
-```
-### Totally Ok brew doctor warnings
-
-There are a couple of pretty benign brew doctor methods.
-
-#### Warning: You have unlinked kegs in your Cellar
-
-This is generally fine. If you want to fix them, just do brew link UNLINKEDKEGNAMES --force
-
-#### Warning: Some keg-only formula are linked into the Cellar.
-
-Totally fine, don't even stress this one.
-
-# Git & SQLite3 Updates via Brew
-
-OS X might ship with an old and broken version of git. We want to update it. Try `git version`. Then do `brew install git`. Open a new terminal tab and do `git version` to see if the version was bumped. If it wasn't, try `which git` to see where your command is running from (most likely is `/usr/bin`). The proper way around this is figuring out why `/usr/bin` is appearing first in your `PATH`. Sometimes `brew link git` helps fix that. If not a quick hack is to:
-
-```
-sudo mv /usr/bin/git /usr/bin/git.bak
-```
-
-That effectively will rename git in `/usr/bin` to a `git.bak` thereby preventing the lookup collision confusion.
-
-The exact same instructions apply to sqlite3. For sqlite3 though you must also do `brew link sqlite3 --force` to create the symlink.
-
-# RVM
-
-Next comes setting up our ruby version manager. OS X ships with an old version of ruby and we want to seamlessly be able to move between versions. First, watch this short [screencast on RVM - 8 minutes](http://screencasts.org/episodes/how-to-use-rvm), read about it on [RVM](http://rvm.io) and then install rvm with:
-
-```
-\curl -L https://get.rvm.io | bash -s stable --ruby=2.1.2
-```
-
-That will install the latest stable version of RVM along with the latest stable version of ruby 2.1.2. Then type `rvm use 2.1.2 --default` to make that your default ruby. Open a new tab and try ruby -v and see if it matches the installed version of ruby. You can install another version of ruby with `rvm install 2.1.1` and see all installable rubies with `rvm list known`
-
-## Troubleshooting RVM
-
-There are two main sources of problems with RVM. Most occur during the installing of Ruby portion. You might get errors regarding XCode or GCC and that generally means you need to [uninstall XCode - read the entire guide, follow all instructions](http://osxdaily.com/2012/02/20/uninstall-xcode/) and then restart your computer. Reinstall an up to date version of Xcode or the command line tools if you are on Mavericks and then try to install ruby again.
-
-Other issues have to do with broken homebrew installations. Try reinstalling homebrew with:
-
-```
-\curl -L https://gist.github.com/mxcl/1173223/raw/a833ba44e7be8428d877e58640720ff43c59dbad/uninstall_homebrew.sh | bash
-```
-
-If ruby installed correctly but `ruby -v` still outputs the 1.8.7 OSX version, do `which ruby` (after opening a new tab and trying again) to confirm it is being run out of `/usr/bin/ruby`. If so, there is a `PATH` issue which should be fixed, but you can also do this hack:
-
-```
-sudo mv /usr/bin/ruby /usr/bin/ruby.bak
-sudo mv /usr/bin/gem /usr/bin/gem.bak
-```
-
-### Uninstalling RVM Because of Sys Wide Installs
-
-Another issue is sometimes rvm gets installed in /usr/local/rvm, a system wide install. If so, you have to rvm implode to uninstall rvm, clear out your .bashrc file or remove any reference to RVM in there, `sudo rm /etc/profile.d/rvm.sh`.  You'll also want to remove the reference to that file you just deleted in the `/etc/profile`. Also `sudo rm /etc/rvmrc`. And then restart your computer and reinstall rvm. Make sure it is installing into `/Users/yourusername/.rvm` and not `/usr/local` A system wide install in /usr/local/rvm, never install rvm with sudo (and avoiding the use of sudo in general).
-Finally ensure that 2.1.2 is the default ruby with `rvm use 2.1.2 --default`
 
 # SublimeText3
 
 We spend most of our time in a text editor. Make sure you have a good one. We use [SublimeText3](http://www.sublimetext.com/3). Once you have that installed, go to the `sublime.md` file in this repository and follow the instructions to get sublime setup properly.
 
 # Check Up
-
-## gcc
-
-Typing `gcc` should give you something like:
-
-```
-clang: error: no input files
-```
-
-Not command not found.
-
-## brew
-
-`brew doctor` should reveal no errors. If it tells you that you have macports installed, uninstall it. Other warnings are generally benign at this point.
 
 ## terminal
 
@@ -152,48 +49,11 @@ If you see some `bash - command not found` type output, it's not a big deal, but
 
 ## ruby
 
-`ruby -v` should give you a modern, rvm based ruby, like 2.1.2. `which ruby` should point to an rvm path. Opening a new terminal should maintain ruby versions, if not try `rvm use 2.1.2 --default`
+`ruby -v` should give you a ruby version.
 
-## rvm
+## CocoaPods
 
-`rvm list` should show you installed ruby versions, like 2.1.2.
-
-## sqlite3
-
-`sqlite3 --version` should be >= the 3.7.12 series. If not, do `brew install sqlite3 and `brew link sqlite3 --force` and open a new terminal to retest.
-
-## git
-
-`git --version` should be above 1.8.5. `which git` should point to `/usr/local/bin/git`. If not `brew install git` and `brew link git --force`, new terminal, retest.
-
-## rubygems
-
-`gem env` should output consistent information about your gem env, pointing to similar RVM based paths. Like:
-
-```
-RubyGems Environment:
-  - RUBYGEMS VERSION: 2.2.1
-  - RUBY VERSION: 2.1.0 (2013-06-27 patchlevel 247) [x86_64-darwin13.0.0]
-  - INSTALLATION DIRECTORY: /Users/arelenglish/.rvm/gems/ruby-2.1.0
-  - RUBY EXECUTABLE: /Users/arelenglish/.rvm/rubies/ruby-2.1.0/bin/ruby
-  - EXECUTABLE DIRECTORY: /Users/arelenglish/.rvm/gems/ruby-2.1.0/bin
-  - SPEC CACHE DIRECTORY: /Users/arelenglish/.gem/specs
-  - RUBYGEMS PLATFORMS:
-    - ruby
-    - x86_64-darwin-13
-  - GEM PATHS:
-     - /Users/arelenglish/.rvm/gems/ruby-2.1.0
-     - /Users/arelenglish/.rvm/gems/ruby-2.1.0@global
-  - GEM CONFIGURATION:
-     - :update_sources => true
-     - :verbose => true
-     - :backtrace => false
-     - :bulk_threshold => 1000
-  - REMOTE SOURCES:
-     - https://rubygems.org/
-```
-
-Notice how all the ruby versions correspond in both number and paths?
+`pod --version` should give you a number. Hopefully `0.33.1`.
 
 # BASH Extras
 

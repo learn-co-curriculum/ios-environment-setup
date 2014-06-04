@@ -39,4 +39,5 @@ If you do not have a clipboard history enabled...well, I mean, that's just crazy
 
 ### Window Management
 
-[Breeze](http://www.autumnapps.com/breeze/) - My favorite.
+[Spectacle](http://spectacleapp.com/) - Joe's Favorite.
+[Breeze](http://www.autumnapps.com/breeze/) - Avi's favorite.
