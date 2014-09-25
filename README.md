@@ -7,6 +7,10 @@ languages: objc, bash
 
 It's important to get your system setup and working well. There are a ton of different ways to customize your system, but to keep things simple, and to make it easy for others to work with you, we're going to set our computers up in a similar way. Go through the instructions in readme and the files in this repo and follow the instructions.
 
+# ruby
+
+BUT I THOUGHT THIS WAS IOS. While Objective-C is amazing for making iOS/OS X apps. A lot of the tools we use to create iOS apps (except XCode) is written in Ruby. So let's install ruby and tool to manage ruby called RVM. There is an AMAZING tutorial called [install Rails](http://installrails.com/steps/choose_os_version) that will walk you through everything. Stop once it gets into installing rails.
+
 # Bash Profile
 
 As you've been learning, your bash_profile is a script that runs every time you open or login to your shell. It can configure environment variables, like your `PS1`, which stores your prompt, or `EDITOR`, which is the command other programs will use when they need to launch your default editor.
@@ -26,16 +30,16 @@ Just remember, to activate a change in the dotfile, you must **reload your shell
 Cocoapods is a library management system. If you are on Mavericks you should be able to install by just doing:
 
 ```
-sudo gem install cocoapod
+gem install cocoapod
 ```
 
 # SublimeText3
 
-We spend most of our time in a text editor. Make sure you have a good one. We use [SublimeText3](http://www.sublimetext.com/3). Once you have that installed, go to the `sublime.md` file in this repository and follow the instructions to get sublime setup properly.
+We spend most of our time in a text editor. Make sure you have a good one. We use [SublimeText3](http://www.sublimetext.com/3). Once you have that installed, go to the (sublime.md)[sublime.md] file in this repository and follow the instructions to get sublime setup properly.
 
 # Check Up
 
-## terminal
+## Terminal
 
 Make sure when you open a new terminal your output looks something like:
 
@@ -46,10 +50,6 @@ Last login: Tue Jun  4 22:43:49 on ttys006
 ```
 
 If you see some `bash - command not found` type output, it's not a big deal, but let a TA know.
-
-## ruby
-
-`ruby -v` should give you a ruby version.
 
 ## CocoaPods
 
@@ -101,26 +101,6 @@ Read [Github GitIgnore Guide](https://help.github.com/articles/ignoring-files), 
 `gem: --no-ri --no-rdoc`
 This will omit installing the rdoc documentation and speed up gem installs.
 
-## .irbrc
+# What Next?
 
-```ruby
-class Object
-
-  def lm
-    (self.methods - Object.methods).sort
-  end
-
-  def lim
-    (self.instance_methods - Object.instance_methods).sort
-  end
-
-end
-
-```
-This will allow you to see what methods an object you're working with has but excluding the stuff that exists on all ruby objects.
-
-##base/sqlitebrowser/navicat
-
-Base is an OS X GUI for browsing SQL databases but is not free.
-SQLitebrowser is a GUI that only works for SQLITE.
-Navicat is a free GUI that works for multiple database types (SQLITE, MYSQL, POSTGRES)
+Check out the other files in this repo. There is plenty of good stuff there!
