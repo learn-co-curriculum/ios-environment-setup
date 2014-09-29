@@ -103,4 +103,7 @@ This will omit installing the rdoc documentation and speed up gem installs.
 
 # What Next?
 
-Check out the other files in this repo. There is plenty of good stuff there!
+Check out the other documents in the repo! In particular make sure you have:
+
+  * Setup Sublime
+  * Set up a blog
