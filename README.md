@@ -67,12 +67,6 @@ If you see some `bash - command not found` type output, it's not a big deal, but
 
 `pod --version` should give you a number. Hopefully `0.33.1`.
 
-# BASH Extras
-
-## Case-Insensitive Auto-Completion
-
-[Installing Case Insensitive Tab Autocompletion](http://superuser.com/questions/90196/case-insensitive-tab-completion-in-bash)
-
 # Git Updates
 
 ## git branch autocompletion
