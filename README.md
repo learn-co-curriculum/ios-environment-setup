@@ -37,6 +37,18 @@ gem install cocoapod
 
 We spend most of our time in a text editor. Make sure you have a good one. We use [SublimeText3](http://www.sublimetext.com/3). Once you have that installed, go to the (sublime.md)[sublime.md] file in this repository and follow the instructions to get sublime setup properly.
 
+# Test Ironboard submitter
+
+First things first you need to edit/create a file called `.netrc` in your home (`~`) directory. So make the file (including the dot!) and put the following into it. You can get your github user id number [here](http://caius.github.io/github_id/)
+
+```
+machine flatiron-push
+  login YOUR_GITHUB_NAME
+  password YOUR_GITHUB_USER_ID_NUMBER
+```
+
+Second, in here there is a script called [installer.sh](installer.sh). Go ahead and download it or if you cloned this repo it should be available to you. Run this script in a bit of a special way like this `/bin/bash --login ./installer.sh` replace `./installer.sh` with wherever the installer is located. It will ask for a password. Just type in your user password and everything should take care of itself!
+
 # Check Up
 
 ## Terminal
