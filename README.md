@@ -30,7 +30,7 @@ Just remember, to activate a change in the dotfile, you must **reload your shell
 Cocoapods is a library management system. If you are on Mavericks you should be able to install by just doing:
 
 ```
-gem install cocoapod
+gem install cocoapods
 ```
 
 # SublimeText3
