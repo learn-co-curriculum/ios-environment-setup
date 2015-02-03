@@ -102,11 +102,6 @@ Pay attention to the cool aliases setup in the git config, like git co for git c
 
 Read [Github GitIgnore Guide](https://help.github.com/articles/ignoring-files), so you understand what a global gitignore will do and then grab the [Flatiron GitIgnore](https://github.com/flatiron-school/dotfiles/blob/master/gitignore) and create it in `~` as `.gitignore`.
 
-## .gemrc
-
-`gem: --no-ri --no-rdoc`
-This will omit installing the rdoc documentation and speed up gem installs.
-
 # What Next?
 
 Check out the other documents in the repo! In particular make sure you have:
