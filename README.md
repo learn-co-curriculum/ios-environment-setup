@@ -37,7 +37,7 @@ gem install cocoapods
 
 We spend most of our time in a text editor. Make sure you have a good one. We use [SublimeText3](http://www.sublimetext.com/3). Once you have that installed, go to the (sublime.md)[sublime.md] file in this repository and follow the instructions to get sublime setup properly.
 
-# Test Ironboard submitter
+# Test Learn submitter
 
 First things first you need to edit/create a file called `.netrc` in your home (`~`) directory. So make the file (including the dot!) and put the following into it. You can get your github user id number [here](http://caius.github.io/github_id/)
 
