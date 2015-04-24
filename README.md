@@ -47,7 +47,7 @@ machine flatiron-push
   password YOUR_GITHUB_USER_ID_NUMBER
 ```
 
-Second, in here there is a script called [installer.sh](https://raw.githubusercontent.com/flatiron-school-curriculum/ios-environment-setup/10feb4bad253b66cec2ea4e54735d6c856a422fc/installer.sh?token=1878855__eyJzY29wZSI6IlJhd0Jsb2I6ZmxhdGlyb24tc2Nob29sLWN1cnJpY3VsdW0vaW9zLWVudmlyb25tZW50LXNldHVwLzEwZmViNGJhZDI1M2I2NmNlYzJlYTRlNTQ3MzVkNmM4NTZhNDIyZmMvaW5zdGFsbGVyLnNoIiwiZXhwaXJlcyI6MTQxMjY5NjIyOX0%3D--28274d47fa2272952e382bc787c2e90aacd37f01). Go ahead and download it or if you cloned this repo it should be available to you. Run this script in a bit of a special way like this `/bin/bash --login ./installer.sh` replace `./installer.sh` with wherever the installer is located. It will ask for a password. Just type in your user password and everything should take care of itself!
+Second, in here there is a script called [installer.sh](https://raw.githubusercontent.com/learn-co-curriculum/ios-environment-setup/10feb4bad253b66cec2ea4e54735d6c856a422fc/installer.sh?token=1878855__eyJzY29wZSI6IlJhd0Jsb2I6ZmxhdGlyb24tc2Nob29sLWN1cnJpY3VsdW0vaW9zLWVudmlyb25tZW50LXNldHVwLzEwZmViNGJhZDI1M2I2NmNlYzJlYTRlNTQ3MzVkNmM4NTZhNDIyZmMvaW5zdGFsbGVyLnNoIiwiZXhwaXJlcyI6MTQxMjY5NjIyOX0%3D--28274d47fa2272952e382bc787c2e90aacd37f01). Go ahead and download it or if you cloned this repo it should be available to you. Run this script in a bit of a special way like this `/bin/bash --login ./installer.sh` replace `./installer.sh` with wherever the installer is located. It will ask for a password. Just type in your user password and everything should take care of itself!
 
 # Check Up
 
