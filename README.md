@@ -1,7 +1,4 @@
----
-tags: setup, environment, bash
-languages: objc, bash
----
+
 
 #Environment Setup
 
