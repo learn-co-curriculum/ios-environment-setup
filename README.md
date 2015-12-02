@@ -105,3 +105,5 @@ Check out the other documents in the repo! In particular make sure you have:
 
   * Setup Sublime
   * Set up a blog
+
+<a href='https://learn.co/lessons/ios-environment-setup' data-visibility='hidden'>View this lesson on Learn.co</a>
